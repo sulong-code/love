@@ -1178,3 +1178,51 @@ body {
 </div>
 
 </div></section></template></div><div id="__FEIS
+                                   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #audioControlButton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            font-size: 30px; /* Adjust size as needed */
+        }
+        #audioControlButton::before {
+            content: '😈'; /* Emoji for the button */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>Here is some content.</p>
+
+    <audio id="backgroundAudio" autoplay loop>
+        <source src="https://sulong-code.github.io/music/Video_1722343230661_20240730211548.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="audioControlButton"></button>
+
+    <script>
+        const audio = document.getElementById('backgroundAudio');
+        const button = document.getElementById('audioControlButton');
+
+        button.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+    </script>
+</body>
+</html>
